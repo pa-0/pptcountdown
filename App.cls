@@ -2,7 +2,7 @@ Public WithEvents PPTEvent As Application
 
 Dim nowTime As Date
 Dim serviceTime As Date
-Const secInDay As Long = 86400
+Const secInDay As LongPtr = 86400
 
 Private Sub Class_Initialize()
 	serviceTime = TimeValue("6:00 PM")
