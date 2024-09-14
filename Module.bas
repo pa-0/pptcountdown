@@ -1,10 +1,10 @@
-Declare Function SetTimer Lib "user32" (ByVal hwnd As Long, ByVal nIDEvent As Long, ByVal uElapse As Long, ByVal lpTimerFunc As Long) As Long
-Declare Function KillTimer Lib "user32" (ByVal hwnd As Long, ByVal nIDEvent As Long) As Long
+Declare PtrSafe Function SetTimer Lib "user32" (ByVal hwnd As LogPtr, ByVal nIDEvent As LogPtr, ByVal uElapse As LogPtr, ByVal lpTimerFunc As LogPtr) As LogPtr
+Declare PtrSafe Function KillTimer Lib "user32" (ByVal hwnd As LogPtr, ByVal nIDEvent As LogPtr) As LogPtr
 
 Dim pptObj As New App
 Dim isEnableMacro As Boolean
 
-Dim timerID As Long
+Dim timerID As LongPtr
 Dim isInTimer As Boolean
 
 Public Sub Initialize()
